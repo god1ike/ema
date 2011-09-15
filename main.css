@@ -252,17 +252,22 @@ body {
 	margin: 1px 0 0;
 	}
 
-.slider .pic {
+.slider .pics {
 	width: 100%;
 	height: 400px;
 	position: relative;
-	border-radius: 6px 6px 0px 0px;
 	overflow: hidden;
-	background: #385593;
 	}
 	
-	.slider .pic a {
+	.slider .pics .slide {
+		width: 200%; /* Сколько слайдов — столько и сотен процентов, ок? */
+		height: 400px;
+		position: relative;
+		}
+	
+	.slider .pics .slide a {
 		background: #385593;
+		float: left;
 		}
 
 .slider .control {
