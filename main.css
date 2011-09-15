@@ -250,25 +250,34 @@ body {
 	
 .slider {
 	margin: 1px 0 0;
+	height: 400px;
 	}
 
-.slider .pics {
+.slider .slide {
 	width: 100%;
 	height: 400px;
-	position: relative;
 	overflow: hidden;
+	position: relative;
 	}
 	
-	.slider .pics .slide {
-		width: 10000000%; /* Сколько слайдов — столько и сотен процентов, ок?  Ставить 10000000 и пох*/
+	.slider .slide .allpics {
+		width: 100%; /* Сколько слайдов — столько и сотен процентов, ок?  Ставить 10000000 и пох*/
 		height: 400px;
-		position: relative;
 		}
 	
-	.slider .pics .slide a {
+	.slider .slide .allpics a {
 		background: #385593;
 		float: left;
+		display: block;
+		width: 100%;
+		height: 400px;
+		position: absolute;
 		}
+		
+		.slider .slide .allpics a div {
+			width: 100%;
+			height: 400px;
+			}
 
 .slider .control {
 	position: relative;
