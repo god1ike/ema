@@ -260,7 +260,7 @@ body {
 	}
 	
 	.slider .pics .slide {
-		width: 200%; /* Сколько слайдов — столько и сотен процентов, ок? */
+		width: 10000000%; /* Сколько слайдов — столько и сотен процентов, ок?  Ставить 10000000 и пох*/
 		height: 400px;
 		position: relative;
 		}
@@ -268,7 +268,6 @@ body {
 	.slider .pics .slide a {
 		background: #385593;
 		float: left;
-/*		padding-right:10px;*/
 		}
 
 .slider .control {
