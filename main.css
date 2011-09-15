@@ -397,16 +397,22 @@ body {
 		height: 21px;
 		}
 
-.explorer {
+.explorers {
 	margin-right: 20px;
 	width: 40%;
 	height: 290px;
-	background: url(images/explorer-1.jpg) no-repeat;
 	float: right;
+	overflow: hidden;
 	position: relative;
 	}
 	
-	.explorer .info {
+	.explorers .exp {
+		position: absolute;
+		width: 100%;
+		height: 290px;
+		}
+	
+	.explorers .exp .info {
 		position: absolute;
 		margin: 0 10px 0 20px;
 		padding: 10px;
@@ -414,14 +420,14 @@ body {
 		background: url(i/explorer-back.png) repeat;
 		}
 
-	.explorer .info a {
+	.explorers .exp .info a {
 		font-size: 1.4em;
 		line-height: 1.4em;
 		font-weight: 700;
 		color: #ff7459;
 		}
 	
-	.explorer .info p {
+	.explorers .exp .info p {
 		font-size: 1.2em;
 		line-height: 1.4em;
 		color: #fff;
