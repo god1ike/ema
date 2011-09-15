@@ -268,6 +268,7 @@ body {
 	.slider .pics .slide a {
 		background: #385593;
 		float: left;
+/*		padding-right:10px;*/
 		}
 
 .slider .control {
@@ -283,8 +284,6 @@ body {
 	
 	.slider .control .paginator .page {
 		position: absolute;
-		left: 14%;
-		width: 14%;
 		height: 7px;
 		background: url(i/paginator-page.png)
 		}
@@ -311,9 +310,11 @@ body {
 			height: 26px;
 			}
 		
-		.slider .control .arrows .left a:hover {background: url(i/arrow-left.png) no-repeat;}
-		.slider .control .arrows .right a:hover {background: url(i/arrow-right.png) no-repeat;}
-		.slider .control .arrows .left a:active, .slider .control .arrows .right a:active {background-position: 0 -26px;}
+		.slider .control .arrows .left a:hover, .slider .control .arrows .right a:hover {cursor:default;}
+		.slider .control .arrows .left.active a:hover, .slider .control .arrows .right.active a:hover {cursor:pointer;}
+		.slider .control .arrows .left.active a:hover {background: url(i/arrow-left.png) no-repeat;}
+		.slider .control .arrows .right.active a:hover {background: url(i/arrow-right.png) no-repeat;}
+		.slider .control .arrows .left.active a:active, .slider .control .arrows .right.active a:active {background-position: 0 -26px;}
 
 .blockname {
 	font-size: 1.8em;
