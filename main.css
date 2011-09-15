@@ -683,3 +683,6 @@ body {
 	#footer .copyright p a{
 		color: #fff;
 		}
+		
+.description{display:none;}
+.part.active p.description {display:block;}
