@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function() {		
     const WIDTH_SLIDE = 1260;
     const NUMBER_SLIDERS = $('.slide a').size();
 		const SLIDE = $('div.slide');
-    const WIDTH_PAGE = WIDTH_SLIDE / NUMBER_SLIDERS;
+		const WIDTH_PAGE = 100 / NUMBER_SLIDERS;
 
-    $('div.page').css("width", WIDTH_PAGE);
+    $('div.page').css("width", WIDTH_PAGE + "%");
 
     $("div.part").live("hover",
     function() {
@@ -57,7 +57,7 @@ $(document).ready(function() {
           1500);
 
           $('div.page').animate({
-              "left": '-=' + WIDTH_PAGE
+              "left": '-=' + WIDTH_PAGE + "%"
           },
           1500,
           function() {
@@ -84,7 +84,7 @@ $(document).ready(function() {
             1500);
 
             $('div.page').animate({
-                "left": '+=' + WIDTH_PAGE
+                "left": '+=' + WIDTH_PAGE + "%"
             },
             1500,
             function() {
