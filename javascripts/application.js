@@ -122,30 +122,31 @@ $(document).ready(function() {
         }
     }
 
-    // var timer_slider = setInterval(function() {
-    //     if (course == "left") {
-    //         slideLeft();
-    //     } else if (course == "right") {
-    //         slideRight();
-    //     }
-    //     if (current_slide.next().length == 0) {
-    //         course = "left";
-    //     };
-    //     if (current_slide.prev().length == 0) {
-    //         course = "right";
-    //     };
-    // },
-    // 2000);
+    var timer_slider = setInterval(function() {
+        if (course == "left") {
+            slideLeft();
+        } else if (course == "right") {
+            slideRight();
+        }
+        if (current_slide.next().length == 0) {
+            course = "left";
+        };
+        if (current_slide.prev().length == 0) {
+            course = "right";
+        };
+    },
+    5000);
+
     $("div.left.active").live("click",
     function() {
-        // clearTimeout(timer_slider);
+        clearTimeout(timer_slider);
         slideLeft();
         return false;
     });
 
     $("div.right.active").live("click",
     function() {
-        // clearTimeout(timer_slider);
+        clearTimeout(timer_slider);
         slideRight();
         return false;
     });
