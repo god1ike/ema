@@ -470,19 +470,29 @@ body {
 		width: 10%;
 		float: left;
 		text-align: center;
+		position: relative;
 		}
+		
+		.timeline ul .date img {
+			left: 50%;
+			margin-left: -6px;
+			top: -20px;
+			position: absolute;
+			}
 		
 		.timeline ul .date a {
 			font-size: 1em;
 			padding: 20px 0 0 0;
 			color: #888;
 			text-decoration: none;
-			background: url(i/time-a-back.png) no-repeat;
 			}
 			
-			.timeline ul .date a:hover, .timeline ul .date a.active {
-				color: #474747;
-				background: url(i/time-a-hover.png) no-repeat;
+			.timeline ul .date a:hover, .timeline ul .date a.active {color: #474747;}
+			.timeline ul .date a img.mark {
+				visibility: hidden;
+				}
+			.timeline ul .date a:hover img.mark, .timeline ul .date a.active img.mark{
+				visibility: visible;
 				}
 
 	.timeline .time {
