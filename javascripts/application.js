@@ -1,6 +1,6 @@
-window.onload = function() {
-    $('div.parts').css("height", $('div.blog').height());
-}
+// window.onload = function() {
+//     $('div.parts').css("height", $('div.blog').height());
+// }
 
 
 $(document).ready(function() {
