@@ -164,12 +164,12 @@ $(document).ready(function() {
     $('div.allpics a').live("hover",
     function(event) {
         if (event.type == 'mouseenter') {
-            $(this).find('img').animate({
+            $(this).find('div').animate({
                 opacity: 1
             },
             500);
         } else if (event.type == 'mouseleave') {
-            $(this).find('img').animate({
+            $(this).find('div').animate({
                 opacity: 0
             },
             500);

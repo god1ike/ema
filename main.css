@@ -731,4 +731,4 @@ body {
 .part.active p.description {display:block;}
 .allpics a{opacity:0;}
 .allpics a.active{opacity:1;}
-.allpics a img{opacity:0;}
+.allpics a div{opacity:0;}
