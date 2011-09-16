@@ -205,7 +205,7 @@ body {
 	
 #nav {
 	width: 75%;
-	margin: 27px 0;
+	margin: 30px 0 0;
 	float: left;
 	}
 	
@@ -250,7 +250,7 @@ body {
 	
 .slider {
 	margin: 1px 0 0;
-	height: 400px;
+	height: 407px;
 	}
 
 .slider .slide {
@@ -336,7 +336,7 @@ body {
 	float: left;
 	height: 430px;
 	background: #ecf5f9;
-	border-top: 1px solid #999;
+	border-top: 1px solid #ddd;
 	}
 
 .map {
@@ -369,6 +369,8 @@ body {
 		height: 288px;
 		background: url(i/mapimg.jpg) no-repeat;
 		border: 1px solid #eee;
+		position: absolute;
+		z-index: 2;
 		}
 
 	.map .flags {
@@ -376,6 +378,7 @@ body {
 	height: 290px;
 	float: left;
 	position: relative;
+	z-index: 3;
 	}
 	
 	.map .flags [class|=flag] {
@@ -637,6 +640,7 @@ body {
 .blog {
 	width: 68%;
 	float: left;
+	background: #fff;
 	}
 	
 	.blog .posts {
