@@ -596,6 +596,15 @@ body {
 	position: relative;
 	}
 	
+	.parts .shadow {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		height: 100%;
+		width: 20px;
+		background: url(i/shadow.png);
+		}
+	
 	.parts .part {
 		float: left;
 		width: 100%;

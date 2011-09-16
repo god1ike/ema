@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-// window.onload = function() {
-//     $('div.parts').css("height", $('div.blog').height());
-// }
-=======
-/*
 window.onload = function() {
     $('div.parts').css("height", $('div.blog').height());
 }
-*/
->>>>>>> Багфикс лишних пикселей в партблоге
 
 
 $(document).ready(function() {
