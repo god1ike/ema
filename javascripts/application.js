@@ -35,6 +35,38 @@ $(document).ready(function() {
         return false;
     });
 
+		setTimeout(function(){
+			if (current_slide.next().length == 0) {
+				
+			}
+			
+			$('div.page').animate({
+          "left": '+=' + WIDTH_PAGE + "%"
+      },
+      1000);
+
+      current_slide.animate({
+          'opacity': 0
+      },
+      1000);
+      current_slide.next().animate({
+          'opacity': 1
+      },
+      1000,
+      function() {
+          if (current_slide.next().length == 0) {
+              $("div.right.active").removeClass("active");
+          }
+      });
+
+      current_slide = current_slide.next();
+
+      if (!arrow_left.hasClass("active")) {
+          $(arrow_left).addClass("active");
+      }
+      
+		}, 2000);
+
     $("div.flags div, li.date a").live("click",
     function() {
         if (!$(this).hasClass("active")) {
