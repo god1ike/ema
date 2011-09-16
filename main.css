@@ -518,6 +518,7 @@ body {
 	width: 45%;
 	margin: 0 0 0 20px;
 	float: left;
+	position: relative;
 	}
 	
 	.media .medialink {
@@ -583,10 +584,9 @@ body {
 			margin: 0 20px 10px;
 			}
 
-
 .parts {
 	width: 32%;
-	height: 810px;
+	height: 100%;
 	background: url(i/participants-back.png);
 	float: left;
 	position: relative;
@@ -661,6 +661,7 @@ body {
 	width: 68%;
 	float: left;
 	background: #fff;
+	border-radius: 0 0 6px 0;
 	}
 	
 	.blog .posts {
