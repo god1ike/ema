@@ -297,6 +297,7 @@ body {
 		}
 
 .slider .control .arrows {
+	z-index:20;
 	position: absolute;
 	width: 60px;
 	height: 27px;
@@ -728,5 +729,5 @@ body {
 .description{display:none;}
 .part.active p.description {display:block;}
 .allpics a{opacity:0;}
-
 .allpics a.active{opacity:1;}
+.allpics a img{opacity:0;}
