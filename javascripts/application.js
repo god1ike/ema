@@ -4,10 +4,10 @@ window.onload = function() {
 
 
 $(document).ready(function() {
-		window.onresize = function(event) {
-			// alert($('div.blog').height());
-			$('div.parts').css("height", $('div.blog').height());
-		}
+    window.onresize = function(event) {
+        // alert($('div.blog').height());
+        $('div.parts').css("height", $('div.blog').height());
+    }
     var WIDTH_SLIDE = 1260;
     var NUMBER_SLIDERS = $('.slide a').size();
     var SLIDE = $('div.slide');
@@ -35,38 +35,6 @@ $(document).ready(function() {
         return false;
     });
 
-		setTimeout(function(){
-			if (current_slide.next().length == 0) {
-				
-			}
-			
-			$('div.page').animate({
-          "left": '+=' + WIDTH_PAGE + "%"
-      },
-      1000);
-
-      current_slide.animate({
-          'opacity': 0
-      },
-      1000);
-      current_slide.next().animate({
-          'opacity': 1
-      },
-      1000,
-      function() {
-          if (current_slide.next().length == 0) {
-              $("div.right.active").removeClass("active");
-          }
-      });
-
-      current_slide = current_slide.next();
-
-      if (!arrow_left.hasClass("active")) {
-          $(arrow_left).addClass("active");
-      }
-      
-		}, 2000);
-
     $("div.flags div, li.date a").live("click",
     function() {
         if (!$(this).hasClass("active")) {
@@ -91,8 +59,7 @@ $(document).ready(function() {
         return false;
     });
 
-    $("div.left.active").live("click",
-    function() {
+    var slideLeft = function() {
         if (!$("div.page").is(":animated")) {
 
             $('div.page').animate({
@@ -120,11 +87,9 @@ $(document).ready(function() {
                 $(arrow_right).addClass("active");
             }
         }
-        return false;
-    });
+    }
 
-    $("div.right.active").live("click",
-    function() {
+    var slideRight = function() {
         if (!$("div.page").is(":animated")) {
             $('div.page').animate({
                 "left": '+=' + WIDTH_PAGE + "%"
@@ -151,6 +116,31 @@ $(document).ready(function() {
                 $(arrow_left).addClass("active");
             }
         }
+    }
+
+    var timer_slider = setTimeout(function() {
+        if (current_slide.next().length == 0) {
+            slideLeft();
+            current_slide = current_slide.prev();
+        } else {
+            slideRight();
+            current_slide = current_slide.next();
+        }
+    },
+    2000);
+
+
+    $("div.left.active").live("click",
+    function() {
+        clearTimeout(timer_slider);
+        slideLeft();
+        return false;
+    });
+
+    $("div.right.active").live("click",
+    function() {
+        clearTimeout(timer_slider);
+        slideRight();
         return false;
     });
 
