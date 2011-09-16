@@ -4,6 +4,10 @@ window.onload = function() {
 
 
 $(document).ready(function() {
+		window.onresize = function(event) {
+			// alert($('div.blog').height());
+			$('div.parts').css("height", $('div.blog').height());
+		}
     var WIDTH_SLIDE = 1260;
     var NUMBER_SLIDERS = $('.slide a').size();
     var SLIDE = $('div.slide');
