@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    const WIDTH_SLIDE = 1260;
-    const NUMBER_SLIDERS = $('.slide a').size();
-    const SLIDE = $('div.slide');
-    const WIDTH_PAGE = 100 / NUMBER_SLIDERS;
+    var WIDTH_SLIDE = 1260;
+    var NUMBER_SLIDERS = $('.slide a').size();
+    var SLIDE = $('div.slide');
+    var WIDTH_PAGE = 100 / NUMBER_SLIDERS;
 
     var current_slide = $('.allpics a').first();
 		var arrow_left = $("div.left");

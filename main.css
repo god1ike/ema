@@ -702,4 +702,5 @@ body {
 .description{display:none;}
 .part.active p.description {display:block;}
 .allpics a{opacity:0;}
+
 .allpics a.active{opacity:1;}
