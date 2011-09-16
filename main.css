@@ -261,7 +261,7 @@ body {
 	}
 	
 	.slider .slide .allpics {
-		width: 100%; /* Сколько слайдов — столько и сотен процентов, ок?  Ставить 10000000 и пох*/
+		width: 100%;
 		height: 400px;
 		}
 	
@@ -272,12 +272,9 @@ body {
 		width: 100%;
 		height: 400px;
 		position: absolute;
+		text-align: center;
+		overflow: hidden;
 		}
-		
-		.slider .slide .allpics a div {
-			width: 100%;
-			height: 400px;
-			}
 
 .slider .control {
 	position: relative;
