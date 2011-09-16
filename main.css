@@ -379,6 +379,8 @@ body {
 		border: 1px solid #eee;
 		position: absolute;
 		z-index: 2;
+		top: 0px;
+		left: 0px;
 		}
 
 	.map .flags {
@@ -456,7 +458,6 @@ body {
 .timeline {
 	margin: 10px 20px;
 	position: relative;
-	float: none;
 	}
 	
 	.timeline .time ul {
