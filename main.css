@@ -584,13 +584,16 @@ body {
 			margin: 0 20px 10px;
 			}
 
+.partblog {
+	width: 100%;
+	background: url(i/participants-back.png);
+	border-radius: 0 0 6px 6px;
+	}
+
 .parts {
 	width: 32%;
-	height: 100%;
-	background: url(i/participants-back.png);
 	float: left;
 	position: relative;
-	border-radius: 0 0 0 6px;
 	}
 	
 	.parts .shadow {
@@ -662,7 +665,17 @@ body {
 	float: left;
 	background: #fff;
 	border-radius: 0 0 6px 0;
+	position: relative;
 	}
+	
+	.blog .shadow {
+		position: absolute;
+		top: 0px;
+		left: -20px;
+		height: 100%;
+		width: 20px;
+		background: url(i/shadow.png);
+		}
 	
 	.blog .posts {
 		margin: 20px;
