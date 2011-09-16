@@ -516,7 +516,8 @@ body {
 
 .media {
 	width: 45%;
-	margin: 0 0 0 20px;
+	padding-left:20px;
+/*	margin: 0 0 0 20px;*/
 	float: left;
 	position: relative;
 	}
