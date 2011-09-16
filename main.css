@@ -331,6 +331,14 @@ body {
 	color: #474747;
 	}
 
+.mapwrap {
+	width: 100%;
+	height: 290px;
+	margin-bottom: 10px;
+	position: relative;
+	float: left;
+	}
+
 .explorations {
 	width: 100%;
 	float: left;
@@ -342,7 +350,7 @@ body {
 .map {
 	position: relative;
 	margin: 0 0 0 20px;
-	width: 55%;
+	width: 54%;
 	float: left;
 	}
 
@@ -446,8 +454,9 @@ body {
 		}
 
 .timeline {
-	margin: 20px;
+	margin: 10px 20px;
 	position: relative;
+	float: none;
 	}
 	
 	.timeline .time ul {
