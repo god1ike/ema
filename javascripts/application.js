@@ -2,12 +2,11 @@ window.onload = function() {
     $('div.parts').css("height", $('div.blog').height());
 }
 
+window.onresize = function(event) {
+    $('div.parts').css("height", $('div.blog').height());
+}
 
 $(document).ready(function() {
-    window.onresize = function(event) {
-        // alert($('div.blog').height());
-        $('div.parts').css("height", $('div.blog').height());
-    }
     var WIDTH_SLIDE = 1260;
     var NUMBER_SLIDERS = $('.slide a').size();
     var SLIDE = $('div.slide');
@@ -17,6 +16,7 @@ $(document).ready(function() {
     var current_slide = $('.allpics a').first();
     var arrow_left = $("div.left");
     var arrow_right = $("div.right");
+    var timer_slider = null;
 
     $('div.page').css("width", WIDTH_PAGE + "%");
 
@@ -122,20 +122,24 @@ $(document).ready(function() {
         }
     }
 
-    var timer_slider = setInterval(function() {
-        if (course == "left") {
-            slideLeft();
-        } else if (course == "right") {
-            slideRight();
-        }
-        if (current_slide.next().length == 0) {
-            course = "left";
-        };
-        if (current_slide.prev().length == 0) {
-            course = "right";
-        };
-    },
-    5000);
+    var runTimer = function() {
+        timer_slider = setInterval(function() {
+            if (course == "left") {
+                slideLeft();
+            } else if (course == "right") {
+                slideRight();
+            }
+            if (current_slide.next().length == 0) {
+                course = "left";
+            };
+            if (current_slide.prev().length == 0) {
+                course = "right";
+            };
+        },
+        5000);
+    }
+
+		runTimer();
 
     $("div.left.active").live("click",
     function() {
@@ -164,11 +168,13 @@ $(document).ready(function() {
     $('div.allpics a').live("hover",
     function(event) {
         if (event.type == 'mouseenter') {
+            clearTimeout(timer_slider);
             $(this).find('div').animate({
                 opacity: 1
             },
             500);
         } else if (event.type == 'mouseleave') {
+						runTimer();
             $(this).find('div').animate({
                 opacity: 0
             },
