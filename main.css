@@ -137,7 +137,7 @@ body {
 		margin: 14px 0 0 15px;
 		width: 30px;
 		height: 12px;
-		background: url(i/lang-active.png) no-repeat;
+		background: url(i/lang-ru.png) no-repeat;
 		float: left;
 		}
 		
@@ -522,10 +522,9 @@ body {
 		text-shadow: 0px 1px #000;
 		}
 
-.media {
+.media.books {
 	width: 45%;
 	padding-left:20px;
-/*	margin: 0 0 0 20px;*/
 	float: left;
 	position: relative;
 	}
@@ -538,7 +537,7 @@ body {
 		margin: 0 0 20px;
 		}
 	
-	.media .book {
+	.media .book, .media .photo, .media .video {
 		float: left;
 		width: 100%;
 		}
@@ -559,7 +558,7 @@ body {
 			background: url(i/bookimg-pages.png) no-repeat;
 			}
 	
-	.media .book .about *{
+	.media *{
 		color: #fff;
 		}
 		
@@ -583,7 +582,7 @@ body {
 			margin: 0 20px 10px;
 			}
 			
-			.media .book .about .link:hover {
+			.media .book .about .link:hover, .media:hover .photo .about a, .media:hover .video .about a {
 				text-decoration: none;
 				}
 		
@@ -591,6 +590,66 @@ body {
 			font-size: 1.4em;
 			line-height: 1.4em;
 			margin: 0 20px 10px;
+			}
+
+.media.photos, .media.videos {
+	width: 23%;
+	padding-left:20px;
+	float: left;
+	position: relative;
+	}
+	
+	.media .photo .photoimg .frame {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 150px;
+			width: 210px;
+			background: url(i/photo-back.png) no-repeat;
+			}
+	
+	.media .photo .photoimg {
+			height: 150px;
+			width: 210px;
+			position: relative;
+			}
+	
+	.media .video .videoimg {
+			height: 150px;
+			width: 210px;
+			position: relative;
+			}
+		
+		.media .photo .photoimg img {
+			margin: 0 0 0 3px;
+			}
+		
+		.media .video .videoimg img {
+			box-shadow: 0px 3px 6px #444;
+			}
+	
+	.media .video .videoimg .playbutton{
+			position: absolute;
+			width: 66px;
+			height: 40px;
+			left: 70px;
+			top: 52px;
+			background: url(i/playbutton.png) no-repeat;
+			}
+			
+			.media .video .videoimg:hover .playbutton{
+				background-position: 0 -40px;
+				}
+			
+			.media .video .videoimg:active .playbutton{
+				background-position: 0 -80px;
+				}
+	
+	.media .photo .about, .media .video .about {
+			font-size: 1.4em;
+			line-height: 1.4em;
+			text-decoration: none;
+			margin: 5px 0;
 			}
 
 .parts {
