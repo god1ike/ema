@@ -397,6 +397,7 @@ body {
 	float: left;
 	position: relative;
 	z-index: 3;
+	overflow: hidden;
 	}
 	
 	.map .flags [class|=flag] {
@@ -435,6 +436,16 @@ body {
 	overflow: hidden;
 	position: relative;
 	}
+	
+	.explorers .fancy {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 12px;
+		height: 290px;
+		background: url(i/exp-fancy.png) no-repeat;
+		z-index: 3;
+		}
 	
 	.explorers .exp {
 		position: absolute;
